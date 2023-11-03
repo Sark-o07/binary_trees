@@ -5,12 +5,12 @@
  * @tree: a pointer to the root node.
  * @func: a pointer to a function to call for each node.
  *
- * Return: None or NULL if tree or func is NULL.
+ * Return: None
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (!tree || !func)
-		return (NULL);
+		return;
 
 	func(tree->n);
 	binary_tree_preoder(tree->left, func);
